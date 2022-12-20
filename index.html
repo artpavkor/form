@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</Form></title>   
+    <style>
+            *
+            {
+            box-sizing: border-box;    
+            }
+            body
+            {
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+            }
+            .form
+            {
+            background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+            display:flex;
+            flex-direction:column;
+            width: 700px;
+            margin: auto;
+            padding: 23px;
+            font-family:'Times New Roman', Times, serif;
+            }
+            .f 
+            {
+               padding: 8px;
+               border-radius: 5px; 
+            }
+            .form label
+            {
+                float: left;
+                font-weight: 700;
+                font-size: 16px;
+            }
+            .header
+            {
+                text-align: center;
+            }
+            .file
+            {
+                margin:auto;
+                text-align: center;
+                border: 2px dotted green;
+                padding: 15px;
+                width: 250px;
+            }
+            #file
+            {
+             padding-left: 20px;
+            }
+            .form p
+            {
+            font-size: 16px;
+            font-weight: 700;
+            } 
+            .checkbox
+            {
+             display: flex;
+             flex-direction: row;
+             align-items: center;
+             padding: 10px;
+            }
+            </style>
+    </head>
+    <body>
+    <form action="#" method="get" class="form">
+        <div class="header">
+            <h1>Анкета для майбутнього співробітника</h1>
+            <p>Ця анкета допоможе нам познайомитися з вами ближче та швидше зрозуміти, чи підходимо один одному для співпраці. Заповнюйте анкету, натискайте кнопку відправити. </p>
+        </div>
+        <!-- name -->
+            <label for="name">Ім'я та Прізвище</label><br>
+            <input type="text" id="name" class="f" name="name" autofocus><br>
+        <!-- date of birth -->
+            <label for="birth">Дата народження</label><br>
+            <input type="date" id="date" class="f" name="birth" max="2004-01-31"><br>
+        <!-- tel.num -->
+            <label for="tel">Номер телефону</label><br>
+            <input type="tel" id="tel" class="f" name="tel" placeholder="099-419-40-63" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"><br>
+        <!-- e-mail -->
+            <label for="email">Електронна адреса</label><br>
+            <input type="email" id="email" class="f" name="email" placeholder="mail@example.com"><br>
+        <!-- sfera -->
+            <label for="sfera">Який напрям Вас цікавить?</label><br>
+            <select name="sfera" id="sfera" class="f" placeholder="Виберіть напрям">
+                <option value="mag">Магазини</option>
+                <option value="office">Офіси</option>
+                <option value="sklad">Розподільчі центри/Склад</option>
+                <option value="ceh">М'ясний цех</option>
+            </select><br>
+        <!-- Job -->
+            <label for="job">Бажана посада</label><br>
+            <input type="text" maxlength="60" class="f">
+        <!-- Experience -->
+        <div class="radio">
+            <h4>Чи є досвід роботи у напрямку, який Вас цікавить?</h4>
+            <label for="radio" style="font-weight: 400;">Так, є</label>
+            <input type="radio" name="radio" id="yes"><br><br>
+            <label for="radio" style="font-weight: 400;">Ні, немає</label>
+            <input type="radio" name="radio" id="no">
+        </div>
+            <p>Вкажіть в якому саме напрямку маєте досвід роботи?</p>
+            <textarea name="experience" id="experience" cols="30" rows="10" style="resize: none;"></textarea>
+            <p>Ким би Ви хотіли працювати</p>
+            <div class="checkbox">  
+            <input type="checkbox" name="checkbox1" id="checkbox1"> 
+            <label for="checkbox" style="font-weight: 400;">Робота на виробництві</label>
+            <br>
+            <input type="checkbox" name="checkbox2" id="checkbox2"> 
+            <label for="checkbox" style="font-weight: 400;">Технічні спеціальності</label>
+            <br>
+            <input type="checkbox" name="checkbox3" id="checkbox3"> 
+            <label for="checkbox" style="font-weight: 400;">Офісні вакансії</label> 
+            <br>
+            <input type="checkbox" name="checkbox4" id="checkbox3">
+            <input type="text" placeholder="Інше (вкажіть посаду)" name="chekbox4">
+        </div>
+            <p>Додайте своє резюме (опціонально)</p>
+        <div class="file">
+            <label for="file"></label>
+            <input type="file" class="f" id="file" name="id" value="Вибраты файл">  
+            <p style="font-weight: 400;">Або перетягніть сюди файли
+            (Додавайте до 5 файлів у форматах png/jpg/doc/xls/pdf та розміром до 5 Мб)</p>
+        </div>   
+        <br>
+            <input type="button" value="Відправити" style="margin: auto; padding: 10px; font-weight: bold; color: white; background-color: brown; border: none; border-radius: 5px;" >
+    </form>
+</html>
